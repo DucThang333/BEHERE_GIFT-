@@ -1,5 +1,4 @@
 import React from "react";
-import ViewFunction from "@/components/Pages/Admin/ViewFunction";
 
 const TableNor = ({ column = [], data = [], isSelectRow = true }) => {
   const size = column.reduce((acc, c) => (acc += c.size), 0);

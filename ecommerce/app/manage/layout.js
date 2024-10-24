@@ -1,7 +1,7 @@
 "use client";
 import React, { Suspense, useEffect } from "react";
 import Sidebar from "@/components/Layout/Sidebar";
-import NavbarManage from "@/components/Layout/navbar/navbarManage";
+import {NavbarManage} from "@/components/Layout/navbar/navbarManage";
 import "./style.css";
 const Layout = ({ children }) => {
   useEffect(() => {
