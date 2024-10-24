@@ -1,7 +1,6 @@
 "use client";
 import React, { Suspense, useEffect } from "react";
 import Sidebar from "@/components/Layout/Sidebar";
-import {NavbarManage} from "@/components/Layout/navbar/navbarManage";
 import "./style.css";
 const Layout = ({ children }) => {
   useEffect(() => {
@@ -18,7 +17,6 @@ const Layout = ({ children }) => {
       <div className="manage-content">
         <div className="navbar-manage">
           <Suspense>
-            <NavbarManage />
           </Suspense>
         </div>
         <div className="manage-main-content">
