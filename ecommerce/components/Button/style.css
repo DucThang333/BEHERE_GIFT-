@@ -1,0 +1,12 @@
+.button {
+  border: 1px solid var(--border-button-basic);
+  padding: 5px 10px 5px 10px;
+  min-width: 90px;
+  min-height: 30px;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 15px;
+}
+.button:hover {
+  background-color: var(--hover-bg-button-basic);
+}

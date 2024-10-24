@@ -1,0 +1,6 @@
+.loading{
+    color: var(--bg-loading);
+}
+.loading-box{
+    transform: translate(-50%,-50%);
+}

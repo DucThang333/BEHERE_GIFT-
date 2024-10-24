@@ -1,0 +1,62 @@
+.model {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  background-color: rgba(128, 128, 128, 0.156);
+}
+.model-content {
+  animation: openPopup 0.2s forwards;
+}
+.model-header {
+  border-bottom: 1px solid var(--border-button-basic);
+}
+
+.model-title {
+  color: var(--text-blue);
+}
+
+.model-step {
+  height: 5px;
+  background: linear-gradient(90deg, red, #2c2cffcc);
+}
+
+@keyframes openPopup {
+  0% {
+    transform: scale(0);
+  }
+  10% {
+    transform: scale(0.1);
+  }
+  20% {
+    transform: scale(0.2);
+  }
+  30% {
+    transform: scale(0.3);
+  }
+  40% {
+    transform: scale(0.4);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  60% {
+    transform: scale(0.6);
+  }
+  70% {
+    transform: scale(0.7);
+  }
+  80% {
+    transform: scale(0.8);
+  }
+  90% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

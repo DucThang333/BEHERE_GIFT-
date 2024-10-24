@@ -1,0 +1,86 @@
+.notify {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  z-index: 9999;
+}
+.notify-content {
+  margin-bottom: 50px;
+  margin-right: 50px;
+  min-width: 250px;
+  min-height: 70px;
+  border-width: 2px;
+  border-radius: 4px;
+  animation: openNotify 6s forwards;
+}
+
+@keyframes openNotify {
+  0% {
+    transform: translateX(calc(100% + 50px));
+  }
+  5% {
+    transform: translateX(calc(100% + 50px) 2/10);
+  }
+  10% {
+    transform: translateX(calc(100% + 50px) 0.5/10);
+  }
+  15% {
+    transform: translateX(calc((100% + 50px) 0.3 / 10));
+  }
+  20% {
+    transform: translateX(calc((100% + 50px) 0.2 / 10));
+  }
+  25% {
+    transform: translateX(calc((100% + 50px) 0.15 / 10));
+  }
+  30% {
+    transform: translateX(calc((100% + 50px) 0.1 / 10));
+  }
+  35% {
+    transform: translateX(calc((100% + 50px) 0.05 / 10));
+  }
+  40% {
+    transform: none;
+  }
+  45% {
+    transform: none;
+  }
+  50% {
+    transform: none;
+  }
+  55% {
+    transform: none;
+  }
+  60% {
+    transform: none;
+  }
+  65% {
+    transform: translateY(7px);
+  }
+  70% {
+    transform: translateY(-7px);
+  }
+  75% {
+    transform: none;
+  }
+  80% {
+    transform: translateX(calc((100% + 50px) 5 / 10));
+  }
+  85% {
+    transform: translateX(calc((100% + 50px) 8 / 10));
+  }
+  90% {
+    transform: translateX(calc((100% + 50px) 9 / 10));
+  }
+  95% {
+    transform: translateX(calc((100% + 50px) 9.5 / 10));
+  }
+  100% {
+    transform: translateX(calc(100% + 50px));
+  }
+}

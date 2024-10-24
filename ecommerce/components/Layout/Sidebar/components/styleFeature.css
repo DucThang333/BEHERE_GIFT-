@@ -1,0 +1,49 @@
+.feature {
+  height: 45px;
+  width: 96%;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  cursor: pointer;
+}
+.feature-content {
+  width: 93%;
+  border-radius: 9px;
+  display: flex;
+  transition: 0.8s background-color;
+}
+
+.feature:hover .feature-content {
+  background-color: rgb(1 1 204 / 13%);
+  transform: scale(1.005);
+}
+.feature-active {
+  width: 6px;
+  height: 100%;
+  border-start-start-radius: 600px;
+  border-end-start-radius: 600px;
+  transition: 0.1s background-color;
+}
+.feature-view {
+  width: 30px;
+  margin-right: 5px;
+}
+.feature-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #9e9d9d;
+}
+
+.feature-view-click {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/* .feature-view-click:hover {
+  background-color: rgba(128, 128, 128, 0.071);
+} */

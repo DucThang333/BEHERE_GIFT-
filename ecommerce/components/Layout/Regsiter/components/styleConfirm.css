@@ -1,0 +1,19 @@
+.form-confirm {
+  width: 450px;
+}
+.confirm-input {
+  border: 2px solid rgb(94 93 93 / 36%);
+  width: 60px;
+  height: 80px;
+  border-radius: 11px;
+  font-size: 40px;
+  text-align: center;
+  color: #63636d;
+  -moz-appearance: textfield;
+}
+
+.confirm-input::-webkit-outer-spin-button,
+.confirm-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

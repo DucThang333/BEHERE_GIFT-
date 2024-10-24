@@ -1,0 +1,101 @@
+export const products = [
+    {
+      id:1,
+      img: ["https://api.teamogift.com/uploads/1726410641098dsc06528.jpg",
+        "https://api.teamogift.com/uploads/1726390116755dsc06546.jpg",
+        "https://api.teamogift.com/uploads/1726411748448442506347-951188903683587-5358744660811074691-n.jpg"
+      ],
+      name: "FOXOMA BOX",
+      cost: "1,049,000 Đ",
+    },
+    {
+      id:2,
+      img: ["https://api.teamogift.com/uploads/1726390116755dsc06546.jpg"],
+      name: "FOXOMA BOX",
+      cost: "849,000 ₫",
+    },
+    {
+      id:3,
+      img: ["https://api.teamogift.com/uploads/1726411748448442506347-951188903683587-5358744660811074691-n.jpg"],
+      name: "FOXOMA BOX",
+      cost: "1,049,000 Đ",
+    },
+    {
+      id:4,
+      img: ["https://api.teamogift.com/uploads/1726410641098dsc06528.jpg"],
+      name: "FOXOMA BOX",
+      cost: "1,049,000 Đ",
+    },
+    {
+      id:5,
+      img: ["https://api.teamogift.com/uploads/1726410641098dsc06528.jpg"],
+      name: "FOXOMA BOX",
+      cost: "1,049,000 Đ",
+    },
+    {
+      id:6,
+      img: ["https://api.teamogift.com/uploads/1726410641098dsc06528.jpg"],
+      name: "FOXOMA BOX",
+      cost: "1,049,000 Đ",
+    },
+    {
+      id:7,
+      img: ["https://api.teamogift.com/uploads/1726410641098dsc06528.jpg"],
+      name: "FOXOMA BOX",
+      cost: "1,049,000 Đ",
+    },
+    {
+      id:8,
+      img: ["https://api.teamogift.com/uploads/1726410641098dsc06528.jpg"],
+      name: "FOXOMA BOX",
+      cost: "1,049,000 Đ",
+    },
+    {
+      id:9,
+      img: ["https://api.teamogift.com/uploads/1726410641098dsc06528.jpg"],
+      name: "FOXOMA BOX",
+      cost: "1,049,000 Đ",
+    },
+    {
+      id:10,
+      img: ["https://api.teamogift.com/uploads/1726410641098dsc06528.jpg"],
+      name: "FOXOMA BOX",
+      cost: "1,049,000 Đ",
+    },
+    {
+      id:11,
+      img: ["https://api.teamogift.com/uploads/1726410641098dsc06528.jpg"],
+      name: "FOXOMA BOX",
+      cost: "1,049,000 Đ",
+    },
+    {id:12,
+      img: ["https://api.teamogift.com/uploads/1726410641098dsc06528.jpg"],
+      name: "FOXOMA BOX",
+      cost: "1,049,000 Đ",
+    },
+    {id:13,
+      img: ["https://api.teamogift.com/uploads/1726410641098dsc06528.jpg"],
+      name: "FOXOMA BOX",
+      cost: "1,049,000 Đ",
+    },
+    {id:14,
+      img: ["https://api.teamogift.com/uploads/1726410641098dsc06528.jpg"],
+      name: "FOXOMA BOX",
+      cost: "1,049,000 Đ",
+    },
+    {id:15,
+      img: ["https://api.teamogift.com/uploads/1726410641098dsc06528.jpg"],
+      name: "FOXOMA BOX",
+      cost: "1,049,000 Đ",
+    },
+    {id:16,
+      img: ["https://api.teamogift.com/uploads/1726410641098dsc06528.jpg"],
+      name: "FOXOMA BOX",
+      cost: "1,049,000 Đ",
+    },
+  ];
+
+
+export function getProducts(id){
+  return products.find(product => product.id === id)    
+} 
