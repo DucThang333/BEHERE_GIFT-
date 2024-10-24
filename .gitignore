@@ -25,8 +25,11 @@ ecommerce/npm-debug.log*
 ecommerce/yarn-debug.log*
 ecommerce/yarn-error.log*
 
+<<<<<<< HEAD
 # local env files
 ecommerce/.env*.local
+=======
+>>>>>>> 0d92eb27479cfdd92fc67f6dd777c8a407b89721
 
 # vercel
 ecommerce/.vercel
