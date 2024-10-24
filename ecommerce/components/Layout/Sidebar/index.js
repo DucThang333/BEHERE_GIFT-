@@ -31,7 +31,7 @@ const Sidebar = () => {
       <div className="sidebar-header">
         <div className="ml-5">
           <Image
-            src="/vercel.svg"
+            src="/logo.png"
             alt="Vercel Logo"
             className="dark:invert"
             width={80}

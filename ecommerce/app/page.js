@@ -12,7 +12,7 @@ import Link from "next/link";
 
 const Home = () => {
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
+    Autoplay({ delay: 4000, stopOnInteraction: true })
   );
 
   return (
@@ -22,19 +22,25 @@ const Home = () => {
           <CarouselContent className="rounded-3xl">
             <CarouselItem>
               <img
-                src="https://api.teamogift.com/uploads/KHDN/1726762501402.jpg"
+                src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/464408767_468184152930056_5886311420093711030_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHP9FMcQMkQQPsmoPb3IGg6ryOu8UPcmASvI67xQ9yYBLf1c5iUrgDYOuUJx4Qk12ITycvoX3-XwJD6-0ohEdiO&_nc_ohc=o6bn-qeG7doQ7kNvgEmECSp&_nc_zt=23&_nc_ht=scontent.fhan14-2.fna&_nc_gid=ACgPdmuiythYJxbizfMR1Ih&oh=00_AYB0O7IDVjHvGBhQBTJOL6AjwdKQvv-u5gTc2RmlE11ZTg&oe=67207A76"
                 className="rounded-3xl"
               />
             </CarouselItem>
             <CarouselItem>
               <img
-                src="https://api.teamogift.com/uploads/_NH_UP_TRANG_CH_/1726901713041_0.jpg"
+                src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/464347990_468184162930055_7699343333606304335_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHnlao2kEx08TaaSIBrRbUATr0dLzzIWKNOvR0vPMhYoxdQVHW0FV0yelS5nMRgh2ctzgSHFFnUtVKaZtbvsaQ6&_nc_ohc=Inq6kLDJXzwQ7kNvgH7Exyg&_nc_zt=23&_nc_ht=scontent.fhan14-2.fna&_nc_gid=A5n9xpm0BacWiAajk_r-Q1F&oh=00_AYAiyrTyjJ5_5eOIpOMzYtZZ9pIZI1yY0JdNhrE-QFFeZw&oe=6720883A"
                 className="rounded-3xl"
               />
             </CarouselItem>
             <CarouselItem>
               <img
-                src="https://api.teamogift.com/uploads/KHDN/1726760050025.jpg"
+                src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/464376903_468184192930052_6200398778000222978_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGaxWgfOGmlcvg6mAN3D37dkhwq1A2nKKaSHCrUDacopjBQ7256RRR_RnJyVsvb_Rt2APPBgMIJcC_9zKKxhQ-E&_nc_ohc=_Qnb0aKBICcQ7kNvgGLHqhO&_nc_zt=23&_nc_ht=scontent.fhan14-2.fna&_nc_gid=ApBLW1gFUsztmJ12pqk-2hm&oh=00_AYAQIi-bqV-1Aw39eSOYLtbGQmChbeqhgDXSjKw9WzCpBw&oe=6720963B"
+                className="rounded-3xl"
+              />
+            </CarouselItem>
+            <CarouselItem>
+              <img
+                src="https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-6/464342428_468184182930053_6268597295564020837_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFVQXyAbcababgMgE5CSFCGiTIEIHsEM9SJMgQgewQz1MrO47noGEjNe5z8f2UsJL2bzt_GCsHVYPiMcdFN4-01&_nc_ohc=3ORThSRyAbcQ7kNvgGz1E43&_nc_zt=23&_nc_ht=scontent.fhan14-3.fna&_nc_gid=AYwakD16CnlL2X1KF1D20IC&oh=00_AYBUvYSJ3dkrdgh4KLM2fH2zPysLT0qdMKuOzp9mYBDLuQ&oe=67208427"
                 className="rounded-3xl"
               />
             </CarouselItem>

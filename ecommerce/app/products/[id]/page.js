@@ -11,8 +11,16 @@ import { videos } from "../../../data/videos";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Card, CardContent } from "@/components/ui/card";
 import { giftBoxs } from "@/data/gift-boxs";
+import {
+  Dialog,
+  DialogHeader,
+  DialogContent,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
 
 export default function ProductDetail({ params }) {
+  const [openModelBuy, setOpenModelBuy] = useState(false);
   const product = getProducts(parseInt(params.id));
   const [amount, setAmount] = useState(1);
   const [selectBox, setSelectBox] = useState(null);
@@ -137,7 +145,12 @@ export default function ProductDetail({ params }) {
           </div>
         </div>
         <div className="flex gap-4">
-          <button className="bg-red-200 px-4 py-3 rounded-full border-red-700 font-semibold border">
+          <button
+            onClick={() => {
+              setOpenModelBuy(true);
+            }}
+            className="bg-red-200 px-4 py-3 rounded-full border-red-700 font-semibold border"
+          >
             Thêm vào giỏ hàng
           </button>
           <button className="min-w-36 bg-red-700 text-white font-semibold px-4 py-3 rounded-full border-red-700 border">
@@ -182,20 +195,108 @@ export default function ProductDetail({ params }) {
                 <img src={selectBox.image} className="rounded-3xl" />
               </div>
             )}
-            {itemVideo?.video && <div>
-              <p className="font-semibold text-rose-400 mb-3">Video tặng kèm</p>
-              <iframe
-                      src={itemVideo.video}
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerpolicy="strict-origin-when-cross-origin"
-                      allowfullscreen
+            {itemVideo?.video && (
+              <div>
+                <p className="font-semibold text-rose-400 mb-3">
+                  Video tặng kèm
+                </p>
+                <iframe
+                  src={itemVideo.video}
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
                 ></iframe>
-            </div>}
+              </div>
+            )}
           </div>
         </div>
       </div>
+      <BuyDialogModel
+        open={openModelBuy}
+        onClose={() => setOpenModelBuy(false)}
+        product={product}
+        amount={amount}
+        giftBox={selectBox}
+        video={itemVideo}
+      />
     </section>
+  );
+}
+
+function BuyDialogModel({ open, onClose, product, giftBox, video, amount }) {
+  console.log("video", { video });
+
+  return (
+    <Dialog
+      open={open}
+      onOpenChange={() => {
+        onClose();
+      }}
+    >
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>Thêm vào giỏ hàng</DialogTitle>
+        </DialogHeader>
+        <div className="flex flex-col gap-4 divide-y">
+          <div className="flex gap-4 items-end justify-between py-3">
+            <div className="flex gap-3 items-end">
+              <img src={product?.img[0]} className="max-w-20" />
+              <p>{product.name}</p>
+            </div>
+            <p>SL : {amount}</p>
+          </div>
+          {giftBox && (
+            <div className="flex gap-4 items-end justify-between py-3">
+              <div className="flex gap-3 items-end">
+                <img src={giftBox?.image} className="max-w-20" />
+                <p>{giftBox.title}</p>
+              </div>
+              <p>SL : 1</p>
+            </div>
+          )}
+          {video && (
+            <div className="flex flex-col gap-4  py-3">
+              <div className="flex gap-4 items-end justify-between w-full">
+                <div className="flex gap-3 items-end justify-between">
+                  <iframe
+                    src={video.video}
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <p>SL : 1</p>
+              </div>
+              <div></div>
+            </div>
+          )}{" "}
+          {video?.assert_image > 0 && (
+            <div className="flex flex-col gap-2">
+              <p className="text-sm">
+                Chọn {video.assert_image} ảnh để thiết kế video
+              </p>
+
+              <div className="grid w-full max-w-sm items-center gap-1.5">
+                {/* <label htmlFor="picture">Picture</label> */}
+                <Input id="picture" type="file" multiple />
+              </div>
+              <p className="text-sm">Lời nhắn</p>
+              <div>
+                <Input type="text" />
+              </div>
+            </div>
+          )}
+        </div>
+        <button
+        onClick={()=>{onClose()}}
+        className="border rounded-md py-3 text-lg font-semibold hover:bg-blue-200/35">
+          Thêm vào giỏ hàng
+        </button>
+      </DialogContent>
+    </Dialog>
   );
 }

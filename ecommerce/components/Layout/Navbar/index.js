@@ -50,9 +50,9 @@ export const Navbar = () => {
         <div className="w-11/12 flex items-center">
           <div className="navbar-logo">
             <Image
-              src="/vercel.svg"
+              src="/logo.png"
               alt="Vercel Logo"
-              className="dark:invert"
+              className="dark:invert rounded-lg"
               width={100}
               height={24}
               priority
