@@ -12,7 +12,7 @@ import Notify from "@/components/Notify/notifys";
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import { DropdownMenuSetting } from "../../Menu/dropdown-menu";
 
-const Navbar = () => {
+export const Navbar = () => {
   // const [loadingLogin, setLoadingLogin] = useState(false);
   const [openModelLogin, setOpenModelLogin] = useState(false);
   const [openModelRegister, setOpenModelRegister] = useState(false);
@@ -137,4 +137,3 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;

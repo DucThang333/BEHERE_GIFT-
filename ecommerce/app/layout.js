@@ -1,18 +1,14 @@
 "use client";
 import "./globals.css";
 import { Provider } from "react-redux";
-import Navbar from "../components/Layout/navbar";
 import Notification from "@/components/Notify";
 import { createStore } from "../reducers/store";
-import SystemKeyService from "@/services/SystemkeyServices";
 import { useEffect, useState } from "react";
-import { Add } from "@/reducers/actions/systemkey";
-import Notify from "@/components/Notify/notifys";
 import { Authen } from "@/reducers/actions/authentication";
 import UserService from "@/services/UserServices";
 import { usePathname, useRouter } from "next/navigation";
-import Routes from "@/routers";
 import { getToken } from "@/libs/utils";
+import {Navbar} from "@/components/Layout/Navbar"
 
 export default function Layout({ children }) {
   const [isManage, setIsManage] = useState(false);
